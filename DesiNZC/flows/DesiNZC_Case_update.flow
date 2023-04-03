@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>57.0</apiVersion>
+    <environments>Default</environments>
+    <formulas>
+        <name>TotalScp3DnstrmEmissions</name>
+        <dataType>Number</dataType>
+        <expression>{!$Record.Vehicle_Asset_Carbon_Footprint__r.TotalScp3DnstrmEmissions} +{!$Record.Scope_3_Carbon_Footprint__r.TotalScp3DnstrmEmissions}</expression>
+        <scale>5</scale>
+    </formulas>
+    <formulas>
+        <description>TotalScp3UpstrmEmissions</description>
+        <name>TotalScp3UpstrmEmissions</name>
+        <dataType>Number</dataType>
+        <expression>{!$Record.Vehicle_Asset_Carbon_Footprint__r.TotalScp3UpstrmEmissions} +
+{!$Record.Scope_3_Carbon_Footprint__r.TotalScp3UpstrmEmissions}</expression>
+        <scale>5</scale>
+    </formulas>
+    <formulas>
+        <name>TotScope3EmissionsInTco2e</name>
+        <dataType>Number</dataType>
+        <expression>{!$Record.Scope_3_Carbon_Footprint__r.TotScope3EmissionsInTco2e} + 
+{!$Record.Vehicle_Asset_Carbon_Footprint__r.TotalScp3DnstrmEmissions} +
+{!$Record.Vehicle_Asset_Carbon_Footprint__r.TotalScp3UpstrmEmissions}</expression>
+        <scale>5</scale>
+    </formulas>
+    <interviewLabel>DesiNZC - Case update {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>DesiNZC - Case update</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordUpdates>
+        <name>update_Case</name>
+        <label>update Case</label>
+        <locationX>176</locationX>
+        <locationY>335</locationY>
+        <inputAssignments>
+            <field>CasTotScope1EmissionsInTco2e__c</field>
+            <value>
+                <elementReference>$Record.Vehicle_Asset_Carbon_Footprint__r.TotScope1EmissionsInTco2e</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>CasTotScope2LocBasedEmissions__c</field>
+            <value>
+                <elementReference>$Record.Vehicle_Asset_Carbon_Footprint__r.TotScope2LocBasedEmissions</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>CasTotScope2MktBasedEmissions__c</field>
+            <value>
+                <elementReference>$Record.Vehicle_Asset_Carbon_Footprint__r.TotScope2MktBasedEmissions</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>CasTotScope3EmissionsInTco2e__c</field>
+            <value>
+                <elementReference>TotScope3EmissionsInTco2e</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>CasTotalScp3DnstrmEmissions__c</field>
+            <value>
+                <elementReference>TotalScp3DnstrmEmissions</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>CasTotalScp3UpstrmEmissions__c</field>
+            <value>
+                <elementReference>TotalScp3UpstrmEmissions</elementReference>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <start>
+        <locationX>50</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>update_Case</targetReference>
+        </connector>
+        <filterFormula>OR(
+ISCHANGED({!$Record.LastModifiedDate}),
+ISCHANGED({!$Record.Vehicle_Asset_Carbon_Footprint__r.LastModifiedDate}),
+ISCHANGED({!$Record.Scope_3_Carbon_Footprint__r.LastModifiedDate})
+)</filterFormula>
+        <object>Case</object>
+        <recordTriggerType>CreateAndUpdate</recordTriggerType>
+        <triggerType>RecordAfterSave</triggerType>
+    </start>
+    <status>Active</status>
+</Flow>

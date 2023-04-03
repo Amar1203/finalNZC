@@ -1,0 +1,1087 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <fullName>AccTotScope1EmissionsInTco2e__c</fullName>
+        <externalId>false</externalId>
+        <label>Total Scope 1 Emissions (tCO2e)</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>AccTotScope2LocBasedEmissions__c</fullName>
+        <externalId>false</externalId>
+        <label>Total Scope 2 Location-Based Emissions</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>AccTotScope2MktBasedEmissions__c</fullName>
+        <externalId>false</externalId>
+        <label>Total Scope 2 Market-based Emissions</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>AccTotScope3EmissionsInTco2e__c</fullName>
+        <description>Roll-Up of Total Scope 3 Emissions (tCO2e)</description>
+        <externalId>false</externalId>
+        <label>Total Scope 3 Emissions (tCO2e)</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>AccTotalScp3DnstrmEmissions__c</fullName>
+        <description>Roll-Up of Total Scope 3 Downstream Emissions</description>
+        <externalId>false</externalId>
+        <label>Total Scope 3 Downstream Emissions(tCO2)</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>AccTotalScp3UpstrmEmissions__c</fullName>
+        <description>Roll-Up of Total Scope 3 Upstream Emissions</description>
+        <externalId>false</externalId>
+        <label>Total Scope 3 Upstream Emissions (tCO2e)</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Account_Plan__c</fullName>
+        <description>Quip Document Link for the Account Plan</description>
+        <externalId>false</externalId>
+        <label>Account Plan</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Url</type>
+    </fields>
+    <fields>
+        <fullName>CreatedDate__c</fullName>
+        <description>What: Used by the Analytics Demo Data Tool. Do Not Remove.</description>
+        <externalId>false</externalId>
+        <label>Created Date</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>External_ID__c</fullName>
+        <caseSensitive>false</caseSensitive>
+        <externalId>true</externalId>
+        <label>External ID</label>
+        <length>255</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>true</unique>
+    </fields>
+    <fields>
+        <fullName>Lead_Conversion_Rate__c</fullName>
+        <externalId>false</externalId>
+        <formula>if( AND(NULLVALUE(Number_Leads_Converted__c, 0)&lt;&gt;0, NULLVALUE(Number_Leads_Total__c, 0)&lt;&gt;0), Number_Leads_Converted__c / Number_Leads_Total__c, 0)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Lead Conversion Rate</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>1</scale>
+        <trackHistory>false</trackHistory>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>Number_Closed_Lost_Opportunities__c</fullName>
+        <defaultValue>0</defaultValue>
+        <description>Number of closed lost opportunities owned by the current partner account</description>
+        <externalId>false</externalId>
+        <label>Lost Opportunities</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Number_Closed_Opportunities__c</fullName>
+        <defaultValue>0</defaultValue>
+        <description>Number of closed opportunities owned by the current partner account</description>
+        <externalId>false</externalId>
+        <label>Closed Opportunities</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Number_Closed_Won_Opportunities__c</fullName>
+        <defaultValue>0</defaultValue>
+        <description>Number of closed won opportunities owned by the current partner account</description>
+        <externalId>false</externalId>
+        <label>Won Opportunities</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Number_Leads_Active__c</fullName>
+        <defaultValue>0</defaultValue>
+        <externalId>false</externalId>
+        <label>Active Leads</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Number_Leads_Converted__c</fullName>
+        <defaultValue>0</defaultValue>
+        <description>Number leads converted by the partner account</description>
+        <externalId>false</externalId>
+        <label>Converted Leads</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Number_Leads_Total__c</fullName>
+        <defaultValue>0</defaultValue>
+        <description>Number leads owned by the partner account all time, including converted and active</description>
+        <externalId>false</externalId>
+        <label>Total Leads</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Opportunity_Win_Rate__c</fullName>
+        <externalId>false</externalId>
+        <formula>if( AND(NULLVALUE(Number_Closed_Won_Opportunities__c, 0)&lt;&gt;0, NULLVALUE(Number_Closed_Opportunities__c, 0)&lt;&gt;0), Number_Closed_Won_Opportunities__c / Number_Closed_Opportunities__c, 0)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Opportunity Win Rate</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>1</scale>
+        <trackHistory>false</trackHistory>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>Partner_Certification__c</fullName>
+        <externalId>false</externalId>
+        <label>Partner Certification</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Certified Partner</fullName>
+                    <default>false</default>
+                    <label>Certified Partner</label>
+                </value>
+                <value>
+                    <fullName>Elite Partner</fullName>
+                    <default>false</default>
+                    <label>Elite Partner</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Partner_Program_Level__c</fullName>
+        <externalId>false</externalId>
+        <label>Partner Program Level</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Platinum</fullName>
+                    <default>false</default>
+                    <label>Platinum</label>
+                </value>
+                <value>
+                    <fullName>Gold</fullName>
+                    <default>false</default>
+                    <label>Gold</label>
+                </value>
+                <value>
+                    <fullName>Silver</fullName>
+                    <default>false</default>
+                    <label>Silver</label>
+                </value>
+                <value>
+                    <fullName>Bronze</fullName>
+                    <default>true</default>
+                    <label>Bronze</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Partnership_Status__c</fullName>
+        <externalId>false</externalId>
+        <label>Partnership Status</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Active</fullName>
+                    <default>false</default>
+                    <label>Active</label>
+                </value>
+                <value>
+                    <fullName>Pending</fullName>
+                    <default>false</default>
+                    <label>Pending</label>
+                </value>
+                <value>
+                    <fullName>Inactive</fullName>
+                    <default>false</default>
+                    <label>Inactive</label>
+                </value>
+                <value>
+                    <fullName>Suspended</fullName>
+                    <default>false</default>
+                    <label>Suspended</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>SDO_Account_Priority__c</fullName>
+        <description>What: used in Reporting</description>
+        <externalId>false</externalId>
+        <formula>IF( ( AnnualRevenue &gt;20000000),&quot;High Priority&quot;, IF(AND( AnnualRevenue &lt; 20000000, AnnualRevenue &gt; 10000000),&quot;Medium Priority&quot;, &quot;Low Priority&quot;))</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Account Priority</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>SDO_Analytics_Latest_Sentiment__c</fullName>
+        <description>This field is used for Data Pipelines demo. Added June 2021.</description>
+        <externalId>false</externalId>
+        <label>Latest Sentiment</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Negative</fullName>
+                    <default>false</default>
+                    <label>Negative</label>
+                </value>
+                <value>
+                    <fullName>Positive</fullName>
+                    <default>false</default>
+                    <label>Positive</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>SDO_Application_Date__c</fullName>
+        <defaultValue>Today() +0</defaultValue>
+        <description>What: used on the Account - Partner Page layout to detail the partner application date.</description>
+        <externalId>false</externalId>
+        <label>Application Date</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>SDO_Days_Since_Activity__c</fullName>
+        <description>What: used in reports for days since last activity</description>
+        <externalId>false</externalId>
+        <formula>TODAY() -  LastActivityDate</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Days Since Activity</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>SDO_Default_Location__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <description>What: Used on the Account - Community Page layout to detail Default Location information. Lookup to Location Object</description>
+        <externalId>false</externalId>
+        <label>Default Location</label>
+        <referenceTo>Location</referenceTo>
+        <relationshipLabel>Accounts</relationshipLabel>
+        <relationshipName>Accounts</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>SDO_Default_Price_Book__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <description>What: Default Price Book for Account reference.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Default price book for work orders</inlineHelpText>
+        <label>Default Price Book</label>
+        <referenceTo>Pricebook2</referenceTo>
+        <relationshipLabel>Accounts</relationshipLabel>
+        <relationshipName>Accounts</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>SDO_Maps_AA_User_Territory__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <description>What: Maps field for assigning a user to the account. Who: Aaron Bendickson. When: Sept, 2021.</description>
+        <externalId>false</externalId>
+        <label>Maps - User Territory</label>
+        <referenceTo>User</referenceTo>
+        <relationshipName>Accounts</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>SDO_Maps_TAM__c</fullName>
+        <description>A number attribute field (Total Addressable Market) used to balance Accounts equally across territories</description>
+        <externalId>false</externalId>
+        <label>SDO Maps TAM</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>SDO_Number_Leads_Active__c</fullName>
+        <defaultValue>0</defaultValue>
+        <description>What: Number of Active Leads for Partner Account</description>
+        <externalId>false</externalId>
+        <label>Active Leads</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>SDO_Number_Leads_Converted__c</fullName>
+        <defaultValue>0</defaultValue>
+        <description>What: Number leads converted by the partner account</description>
+        <externalId>false</externalId>
+        <label>Converted Leads</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>SDO_Number_Open_Opportunities__c</fullName>
+        <defaultValue>0</defaultValue>
+        <description>What: Number open opportunities owned by the current partner account</description>
+        <externalId>false</externalId>
+        <label>Open Opportunities</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>SDO_Operating_Hours__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <description>What: Lookup field to Operating Hours Object</description>
+        <externalId>false</externalId>
+        <inlineHelpText>If the customer has defined visiting hours, select them here.</inlineHelpText>
+        <label>Operating Hours</label>
+        <referenceTo>OperatingHours</referenceTo>
+        <relationshipLabel>Accounts</relationshipLabel>
+        <relationshipName>Accounts</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>SDO_Partner_Certification__c</fullName>
+        <description>What: Used for Partner Certification Information</description>
+        <externalId>false</externalId>
+        <label>Partner Certification</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Certified Partner</fullName>
+                    <default>false</default>
+                    <label>Certified Partner</label>
+                </value>
+                <value>
+                    <fullName>Elite Partner</fullName>
+                    <default>false</default>
+                    <label>Elite Partner</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>SDO_Partner_Geographic_Coverage__c</fullName>
+        <description>What: PRM field used in reporting</description>
+        <externalId>false</externalId>
+        <label>Partner Geographic Coverage</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>MultiselectPicklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>APAC</fullName>
+                    <default>false</default>
+                    <label>APAC</label>
+                </value>
+                <value>
+                    <fullName>North America</fullName>
+                    <default>false</default>
+                    <label>North America</label>
+                </value>
+                <value>
+                    <fullName>LACA</fullName>
+                    <default>false</default>
+                    <label>LACA</label>
+                </value>
+                <value>
+                    <fullName>EMEA</fullName>
+                    <default>false</default>
+                    <label>EMEA</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+        <visibleLines>5</visibleLines>
+    </fields>
+    <fields>
+        <fullName>SDO_Partner_Program_Level__c</fullName>
+        <description>What: PRM field used in reporting</description>
+        <externalId>false</externalId>
+        <label>Partner Program Level</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Platinum</fullName>
+                    <default>false</default>
+                    <label>Platinum</label>
+                </value>
+                <value>
+                    <fullName>Gold</fullName>
+                    <default>false</default>
+                    <label>Gold</label>
+                </value>
+                <value>
+                    <fullName>Silver</fullName>
+                    <default>false</default>
+                    <label>Silver</label>
+                </value>
+                <value>
+                    <fullName>Bronze</fullName>
+                    <default>true</default>
+                    <label>Bronze</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>SDO_Partner_Type__c</fullName>
+        <description>What: PRM field used in reporting</description>
+        <externalId>false</externalId>
+        <label>Partner Type</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Partner</fullName>
+                    <default>true</default>
+                    <label>Partner</label>
+                </value>
+                <value>
+                    <fullName>Reseller</fullName>
+                    <default>false</default>
+                    <label>Reseller</label>
+                </value>
+                <value>
+                    <fullName>Distributor</fullName>
+                    <default>false</default>
+                    <label>Distributor</label>
+                </value>
+                <value>
+                    <fullName>Alliance Partner</fullName>
+                    <default>false</default>
+                    <label>Alliance Partner</label>
+                </value>
+                <value>
+                    <fullName>Service Provider</fullName>
+                    <default>false</default>
+                    <label>Service Provider</label>
+                </value>
+                <value>
+                    <fullName>System Integrator</fullName>
+                    <default>false</default>
+                    <label>System Integrator</label>
+                </value>
+                <value>
+                    <fullName>Service &amp; Support Specialist</fullName>
+                    <default>false</default>
+                    <label>Service &amp; Support Specialist</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>SDO_Partnership_Status__c</fullName>
+        <description>What: Used on the Account - Partner page layout to show the partnership status</description>
+        <externalId>false</externalId>
+        <label>Partnership Status</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Active</fullName>
+                    <default>false</default>
+                    <label>Active</label>
+                </value>
+                <value>
+                    <fullName>Pending</fullName>
+                    <default>false</default>
+                    <label>Pending</label>
+                </value>
+                <value>
+                    <fullName>Inactive</fullName>
+                    <default>false</default>
+                    <label>Inactive</label>
+                </value>
+                <value>
+                    <fullName>Suspended</fullName>
+                    <default>false</default>
+                    <label>Suspended</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>SDO_SFS_Default_Field_Entitlement__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <description>What: SFS Field for Default Field Entitlement
+Who: FSL team</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Select the default field service entitlement to use for this account and all of its assets</inlineHelpText>
+        <label>Default Field Entitlement</label>
+        <referenceTo>Entitlement</referenceTo>
+        <relationshipLabel>Accounts</relationshipLabel>
+        <relationshipName>Accounts</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>SDO_SFS_Service_Territory__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <description>What: FSL/SFS Field for Service Territory</description>
+        <externalId>false</externalId>
+        <inlineHelpText>What service territory is this account located in</inlineHelpText>
+        <label>Service Territory</label>
+        <referenceTo>ServiceTerritory</referenceTo>
+        <relationshipLabel>Accounts</relationshipLabel>
+        <relationshipName>Accounts</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>SDO_SFS_Work_Type__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <description>What: SFS/FSL Field for Work Type reference.
+Who: SFS Team</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Default work type to use for this account for field service activity</inlineHelpText>
+        <label>Work Type</label>
+        <referenceTo>WorkType</referenceTo>
+        <relationshipLabel>Accounts</relationshipLabel>
+        <relationshipName>Accounts</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>SDO_SFS_Work_Type_for_Quote_Creation__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <description>What: SFS/FSL Work Type for Quote Creation Field.
+Who: SFS Field</description>
+        <externalId>false</externalId>
+        <label>Work Type for Quote Creation</label>
+        <referenceTo>WorkType</referenceTo>
+        <relationshipLabel>Accounts (Work Type for Quote Creation)</relationshipLabel>
+        <relationshipName>Accounts1</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>SDO_Sales_Closed_Lost_Opptys__c</fullName>
+        <description>What: Used in Reporting for Open vs Closed Opptys</description>
+        <externalId>false</externalId>
+        <label>Closed Lost Opptys</label>
+        <summaryFilterItems>
+            <field>Opportunity.StageName</field>
+            <operation>equals</operation>
+            <value>Closed Lost</value>
+        </summaryFilterItems>
+        <summaryForeignKey>Opportunity.AccountId</summaryForeignKey>
+        <summaryOperation>count</summaryOperation>
+        <trackHistory>false</trackHistory>
+        <type>Summary</type>
+    </fields>
+    <fields>
+        <fullName>SDO_Sales_Closed_Won_Opptys__c</fullName>
+        <description>What: Closed Won Oppty Field Roll-up</description>
+        <externalId>false</externalId>
+        <label>Closed Won Opptys</label>
+        <summaryFilterItems>
+            <field>Opportunity.StageName</field>
+            <operation>equals</operation>
+            <value>Closed Won</value>
+        </summaryFilterItems>
+        <summaryForeignKey>Opportunity.AccountId</summaryForeignKey>
+        <summaryOperation>count</summaryOperation>
+        <trackHistory>false</trackHistory>
+        <type>Summary</type>
+    </fields>
+    <fields>
+        <fullName>SDO_Sales_Closed_Won_Value__c</fullName>
+        <description>What: This is automatically calculated from closed opportunities.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>This is automatically calculated from closed opportunities.</inlineHelpText>
+        <label>Total Sales</label>
+        <summarizedField>Opportunity.Amount</summarizedField>
+        <summaryFilterItems>
+            <field>Opportunity.StageName</field>
+            <operation>equals</operation>
+            <value>Closed Won</value>
+        </summaryFilterItems>
+        <summaryForeignKey>Opportunity.AccountId</summaryForeignKey>
+        <summaryOperation>sum</summaryOperation>
+        <trackHistory>false</trackHistory>
+        <type>Summary</type>
+    </fields>
+    <fields>
+        <fullName>SDO_Sales_Current_Year_Revenue_Goal__c</fullName>
+        <description>What: Current year Revenue Goal</description>
+        <externalId>false</externalId>
+        <label>Current Year Revenue Goal</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>SDO_Sales_Goal_Attainment__c</fullName>
+        <description>What: Measure of YTD Revenue vs. Goal</description>
+        <externalId>false</externalId>
+        <formula>SDO_YTD_Revenue_Generated__c  /  SDO_Sales_Current_Year_Revenue_Goal__c</formula>
+        <label>% Goal Attainment</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>SDO_Sales_Lead_Conversion_Rate__c</fullName>
+        <description>What: Sales Lead Conversion Rate.</description>
+        <externalId>false</externalId>
+        <formula>if( AND(NULLVALUE(SDO_Number_Leads_Converted__c, 0)&lt;&gt;0, NULLVALUE(SDO_Sales_Number_Leads_Total__c, 0)&lt;&gt;0), SDO_Number_Leads_Converted__c / SDO_Sales_Number_Leads_Total__c, 0)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Lead Conversion Rate</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>1</scale>
+        <trackHistory>false</trackHistory>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>SDO_Sales_Lead_To_Opportunity_Close_Rate__c</fullName>
+        <description>What: Close rate field. Used in multiple reports.</description>
+        <externalId>false</externalId>
+        <formula>if( AND(NULLVALUE(SDO_Sales_Num_Closed_Won_Opportunities__c, 0)&lt;&gt;0, NULLVALUE(SDO_Number_Leads_Converted__c, 0)&lt;&gt;0), SDO_Sales_Num_Closed_Won_Opportunities__c / SDO_Number_Leads_Converted__c, 0)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Lead To Opportunity Close Rate</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>1</scale>
+        <trackHistory>false</trackHistory>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>SDO_Sales_Num_Closed_Lost_Opportunities__c</fullName>
+        <defaultValue>0</defaultValue>
+        <description>What: Number of closed lost opportunities owned by the current partner account</description>
+        <externalId>false</externalId>
+        <label>Lost Opportunities</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>SDO_Sales_Num_Closed_Won_Opportunities__c</fullName>
+        <defaultValue>0</defaultValue>
+        <description>What: Number of closed won opportunities owned by the current partner account</description>
+        <externalId>false</externalId>
+        <label>Won Opportunities</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>SDO_Sales_Number_Closed_Opportunities__c</fullName>
+        <defaultValue>0</defaultValue>
+        <description>What: Number of closed opportunities owned by the current partner account</description>
+        <externalId>false</externalId>
+        <label>Closed Opportunities</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>SDO_Sales_Number_Leads_Total__c</fullName>
+        <defaultValue>0</defaultValue>
+        <description>What: Number leads owned by the partner account all time, including converted and active</description>
+        <externalId>false</externalId>
+        <label>Total Leads</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>SDO_Sales_Open_Oppty_Value__c</fullName>
+        <description>What: Display total value of all open opptys by account.</description>
+        <externalId>false</externalId>
+        <label>Open Oppty Value</label>
+        <summarizedField>Opportunity.Amount</summarizedField>
+        <summaryFilterItems>
+            <field>Opportunity.StageName</field>
+            <operation>notEqual</operation>
+            <value>Closed Won, Closed Lost</value>
+        </summaryFilterItems>
+        <summaryForeignKey>Opportunity.AccountId</summaryForeignKey>
+        <summaryOperation>sum</summaryOperation>
+        <trackHistory>false</trackHistory>
+        <type>Summary</type>
+    </fields>
+    <fields>
+        <fullName>SDO_Sales_Open_Opptys__c</fullName>
+        <description>What: Open Opptys by Account. Who: Sales Team.</description>
+        <externalId>false</externalId>
+        <label>Open Opptys</label>
+        <summaryFilterItems>
+            <field>Opportunity.StageName</field>
+            <operation>notEqual</operation>
+            <value>Closed Won, Closed Lost</value>
+        </summaryFilterItems>
+        <summaryForeignKey>Opportunity.AccountId</summaryForeignKey>
+        <summaryOperation>count</summaryOperation>
+        <trackHistory>false</trackHistory>
+        <type>Summary</type>
+    </fields>
+    <fields>
+        <fullName>SDO_Sales_Opportunity_Win_Rate__c</fullName>
+        <description>What: Sales field for Opportunity Win Rate.</description>
+        <externalId>false</externalId>
+        <formula>if( AND(NULLVALUE(SDO_Sales_Num_Closed_Won_Opportunities__c, 0)&lt;&gt;0, NULLVALUE(SDO_Sales_Number_Closed_Opportunities__c, 0)&lt;&gt;0), SDO_Sales_Num_Closed_Won_Opportunities__c / SDO_Sales_Number_Closed_Opportunities__c, 0)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Opportunity Win Rate</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>1</scale>
+        <trackHistory>false</trackHistory>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>SDO_Sales_Rating_Indicator__c</fullName>
+        <description>What: used in Channel Plans reporting</description>
+        <externalId>false</externalId>
+        <formula>IMAGE(IF (SDO_Value__c &gt; 0, &apos;https://qnextgen.s3.us-west-1.amazonaws.com/icons/account/Icon-+Star+On.png&apos;, &apos;https://qnextgen.s3.us-west-1.amazonaws.com/icons/account/Icon-+Star+Off.png&apos;),&apos;&apos;,22,22) &amp;&quot;&quot;&amp; 
+IMAGE(IF (SDO_Value__c &gt; 1, &apos;https://qnextgen.s3.us-west-1.amazonaws.com/icons/account/Icon-+Star+On.png&apos;, &apos;https://qnextgen.s3.us-west-1.amazonaws.com/icons/account/Icon-+Star+Off.png&apos;),&apos;&apos;,22,22) &amp;&quot;&quot;&amp; 
+IMAGE(IF (SDO_Value__c &gt; 2, &apos;https://qnextgen.s3.us-west-1.amazonaws.com/icons/account/Icon-+Star+On.png&apos;, &apos;https://qnextgen.s3.us-west-1.amazonaws.com/icons/account/Icon-+Star+Off.png&apos;),&apos;&apos;,22,22) &amp;&quot;&quot;&amp; 
+IMAGE(IF (SDO_Value__c &gt; 3, &apos;https://qnextgen.s3.us-west-1.amazonaws.com/icons/account/Icon-+Star+On.png&apos;, &apos;https://qnextgen.s3.us-west-1.amazonaws.com/icons/account/Icon-+Star+Off.png&apos;),&apos;&apos;,22,22) &amp;&quot;&quot;&amp; 
+IMAGE(IF (SDO_Value__c &gt; 4, &apos;https://qnextgen.s3.us-west-1.amazonaws.com/icons/account/Icon-+Star+On.png&apos;, &apos;https://qnextgen.s3.us-west-1.amazonaws.com/icons/account/Icon-+Star+Off.png&apos;),&apos;&apos;,22,22)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Value Indicator</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>SDO_Sales_Region__c</fullName>
+        <description>What: Used to regionalize sales information</description>
+        <externalId>false</externalId>
+        <label>Region</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>East</fullName>
+                    <default>false</default>
+                    <label>East</label>
+                </value>
+                <value>
+                    <fullName>Central</fullName>
+                    <default>false</default>
+                    <label>Central</label>
+                </value>
+                <value>
+                    <fullName>West</fullName>
+                    <default>false</default>
+                    <label>West</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>SDO_Sales_Value_Closed_Won_Opportunties__c</fullName>
+        <description>What: Value of closed won opptys.</description>
+        <externalId>false</externalId>
+        <label>Value Closed Won Opportunities</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>SDO_Value_Open_Opportunties__c</fullName>
+        <description>What: Total Value of Open Opptys for Partner Account</description>
+        <externalId>false</externalId>
+        <label>Value of Open Opportunities</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>SDO_Value__c</fullName>
+        <description>What: This field drives the Value Indicator field.  Enter a value of 1-5.</description>
+        <externalId>false</externalId>
+        <label>Value</label>
+        <precision>1</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>SDO_YTD_Revenue_Generated__c</fullName>
+        <description>What: YTD Revenue Generated for Partner Account</description>
+        <externalId>false</externalId>
+        <label>YTD Revenue Generated</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Scope_3_Carbon_Footprint__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Scope 3 Carbon Footprint</label>
+        <referenceTo>Scope3CrbnFtprnt</referenceTo>
+        <relationshipLabel>Accounts</relationshipLabel>
+        <relationshipName>Accounts</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Tier__c</fullName>
+        <description>SPM Maps Tier Picklist</description>
+        <externalId>false</externalId>
+        <label>Tier</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>A</fullName>
+                    <default>false</default>
+                    <label>A</label>
+                </value>
+                <value>
+                    <fullName>B</fullName>
+                    <default>false</default>
+                    <label>B</label>
+                </value>
+                <value>
+                    <fullName>C</fullName>
+                    <default>false</default>
+                    <label>C</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Value_Closed_Won_Opportunties__c</fullName>
+        <externalId>false</externalId>
+        <label>Value Closed Won Opportunities</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Vehicle_Asset_Carbon_Footprint__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Vehicle Asset Carbon Footprint</label>
+        <referenceTo>VehicleAssetCrbnFtprnt</referenceTo>
+        <relationshipLabel>Accounts</relationshipLabel>
+        <relationshipName>Accounts</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Lookup</type>
+    </fields>
+</CustomObject>
